@@ -45,9 +45,20 @@ pipeline{
                 sh """
 
                 ls -la
+                zip -r catalogue.zip ./* -x ".git" -x "*.zip"
+                ls -ltr
 
                 """
             }
         }
     }
+
+    post {
+        always {
+            echo 'i will say hello again'
+            echo 'here we are deleting the directories after runnigng the pipeline'
+            deleteDir()
+        }
+    }
 }
+
