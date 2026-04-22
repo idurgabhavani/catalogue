@@ -58,6 +58,7 @@ pipeline{
             echo 'i will say hello again'
             echo 'here we are deleting the directories after runnigng the pipeline'
             deleteDir()
+            cleanWs()
         }
     }
 }
