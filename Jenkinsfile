@@ -1,9 +1,10 @@
 pipeline{
-    agent {
-        node{
-            label 'AGENT-1'
-        }
-    }
+    agent any
+    // {
+    //     node{
+    //         label 'AGENT-1'
+    //     }
+    // }
 
     environment {
         packageVersion = '' // our package version changes every time so we need to check the package version
