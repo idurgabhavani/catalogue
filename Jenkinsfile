@@ -8,3 +8,9 @@ def configMap = [
     component: "catalogue"
 ]
 
+if( ! env.BRANCH_NAME.equalsIgnoreCase('master')){
+    piplineDecission.decidePipeline(configMap)
+}
+else{
+    echo "this is producation deal with CR team"
+}
